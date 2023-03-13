@@ -59,4 +59,13 @@ public interface ICalculadora  {
     );
 
 
+    @WebMethod
+    double cardapio(
+            @WebParam(name = "codigo") int codigo,
+            @WebParam(name = "preco") double preco,
+            @WebParam(name = "quantidade") int quantidade,
+            @WebParam(name = "pedido") double pedido
+    );
+
+
 }
