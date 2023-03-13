@@ -72,7 +72,65 @@ public class Calculadora implements ICalculadora{
         soma = (conversaoDia + conversaoMes + conversaoAno);
         return soma;
     }
+    @Override
+    public double cardapio(int codigo, double preco, int quantidade, double pedido){
+        System.out.println("CARDAPIO\n" +
+        "CODIGO 100  CACHORRO QUENTE  PREÇO 1.20\n" +
+        "CODIGO 101  BAURU SIMPLES    PREÇO 1.30\n" +
+        "CODIGO 102  BAURU COM OVO    PREÇO 1.50\n" +
+        "CODIGO 103  HAMBURGGER       PREÇO 1.20\n" +
+        "CODIGO 104  CHEESEBURGUER    PREÇO 1.30\n" +
+        "CODIGO 105 REFRIGERANTE      PREÇO 1.00\n"
+        );
+        double cachorroQuente = 100;
 
+        System.out.println("Digite o codigo do lanche desejado");
+        Scanner scanner = new Scanner(System.in);
+        codigo = scanner.nextInt();
+
+        System.out.println("Digite a quantidade desejada");
+        Scanner scanner1 = new Scanner(System.in);
+        quantidade = scanner1.nextInt();
+
+        if (codigo == 100){
+            preco = 1.20;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+        }
+       else if (codigo == 101){
+            preco = 1.30;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+        }
+       else if (codigo == 102){
+            preco = 1.50;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+        }
+       else if (codigo == 103){
+            preco = 1.20;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+        }
+       else if (codigo == 104){
+            preco = 1.30;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+        }
+       else if (codigo == 105){
+            preco = 1.00;
+            pedido = preco * quantidade;
+            System.out.println("O seu pedido deu: R$" + pedido);
+
+        } else {
+            System.out.println("CODIGO INVALIDO, POR FAVOR DIGITE UM CODIGO VALIDO.");
+        }
+
+
+
+
+        return pedido;
+    }
 
 
 }
