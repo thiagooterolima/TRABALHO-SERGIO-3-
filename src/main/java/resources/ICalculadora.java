@@ -25,10 +25,38 @@ public interface ICalculadora  {
             @WebParam(name = "y1") double y1,
             @WebParam(name = "y2") double y2
 
+    );
+
+    @WebMethod
+    double numerosInteiros(
+
+            @WebParam(name = "A") double A,
+            @WebParam(name = "B") double B,
+            @WebParam(name = "C") double C,
+            @WebParam(name = "R") double R,
+            @WebParam(name = "S") double S,
+            @WebParam(name = "D") double D
 
 
     );
 
+    @WebMethod
+    int idade(
+      @WebParam(name = "dia") int dia,
+      @WebParam(name = "mes") int mes,
+      @WebParam(name = "ano") int ano,
+      @WebParam(name = "soma") int soma
+    );
+
+    @WebMethod
+    double calculadora_produto(
+            @WebParam(name = "ABCD") int ABCD,
+            @WebParam(name = "XYPK") int XYPK,
+            @WebParam(name = "KLMP") int KLMP,
+            @WebParam(name = "QRST") int QRST
+
+
+    );
 
 
 }

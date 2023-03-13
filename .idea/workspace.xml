@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d54a025-0679-448f-a721-e3e265b5a57f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Servidor_WS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/Calculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/ICalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/ICalculadora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/resources/Calculadora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/resources/Calculadora.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/resources/ICalculadora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/resources/ICalculadora.class" afterDir="false" />
     </list>
