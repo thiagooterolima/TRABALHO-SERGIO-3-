@@ -14,4 +14,21 @@ public interface ICalculadora  {
 
     @WebMethod
     double calculadoraRaizQuadrada(@WebParam(name= "x")double x);
+
+
+    @WebMethod
+    double calcularPonto (
+
+            @WebParam(name = "x1") double x1,
+            @WebParam(name = "x2") double x2,
+
+            @WebParam(name = "y1") double y1,
+            @WebParam(name = "y2") double y2
+
+
+
+    );
+
+
+
 }

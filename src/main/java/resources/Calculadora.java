@@ -18,4 +18,22 @@ public class Calculadora implements ICalculadora{
         return r;
     }
 
+    @Override
+    public  double calcularPonto(double x1,double x2,double y1, double y2){
+
+        x1 = 1;
+        x2 = 1;
+        y1 = 1;
+        y2 = 1;
+
+        double r = Math.sqrt(((x1 + x2) *2 ) + ((y1 + y2) *2 ));
+
+        return r;
+
+
+
+    }
+
+
+
 }
