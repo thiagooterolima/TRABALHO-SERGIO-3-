@@ -30,9 +30,26 @@ public class Calculadora implements ICalculadora{
 
         return r;
 
-
-
     }
+
+    @Override
+    public double numerosInteiros(double A,double B,double C, double R, double S, double D) {
+        A = 5;
+        B = 10;
+        C = 15;
+
+        double soma = A + B;
+        R = Math.pow(soma,2);
+
+        double soma2 = B + C;
+        S = Math.pow(soma2,2);
+
+        D = (R + S) / 2;
+
+        return D;
+    }
+
+
 
 
 

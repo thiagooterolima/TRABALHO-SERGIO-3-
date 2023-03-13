@@ -25,6 +25,17 @@ public interface ICalculadora  {
             @WebParam(name = "y1") double y1,
             @WebParam(name = "y2") double y2
 
+    );
+
+    @WebMethod
+    double numerosInteiros(
+
+            @WebParam(name = "A") double A,
+            @WebParam(name = "B") double B,
+            @WebParam(name = "C") double C,
+            @WebParam(name = "R") double R,
+            @WebParam(name = "S") double S,
+            @WebParam(name = "D") double D
 
 
     );
