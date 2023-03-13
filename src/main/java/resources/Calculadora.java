@@ -2,6 +2,8 @@ package resources;
 
 import jakarta.jws.WebService;
 
+import java.util.Scanner;
+
 
 @WebService(endpointInterface = "resources.ICalculadora")
 public class Calculadora implements ICalculadora{
@@ -49,7 +51,27 @@ public class Calculadora implements ICalculadora{
         return D;
     }
 
+    @Override
+    public int idade (int dia, int mes, int ano, int soma) {
+        System.out.println("Digite o dia de nascimento");
+        Scanner scanner = new Scanner(System.in);
+        dia = scanner.nextInt();
 
+        System.out.println("Digite o mes de nascimento");
+        Scanner scanner1 = new Scanner(System.in);
+        mes = scanner1.nextInt();
+
+        System.out.println("Digite o ano de nascimento");
+        Scanner scanner2 = new Scanner(System.in);
+        ano = scanner2.nextInt();
+
+        int conversaoMes = mes * 30;
+        int conversaoAno = (2023 - ano) * 365;
+        int conversaoDia = dia;
+
+        soma = (conversaoDia + conversaoMes + conversaoAno);
+        return soma;
+    }
 
 
 

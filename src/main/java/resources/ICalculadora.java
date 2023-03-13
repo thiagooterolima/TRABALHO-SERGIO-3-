@@ -40,6 +40,13 @@ public interface ICalculadora  {
 
     );
 
+    @WebMethod
+    int idade(
+      @WebParam(name = "dia") int dia,
+      @WebParam(name = "mes") int mes,
+      @WebParam(name = "ano") int ano,
+      @WebParam(name = "soma") int soma
+    );
 
 
 }
