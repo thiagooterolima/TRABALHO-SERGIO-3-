@@ -7,19 +7,6 @@ import java.util.Scanner;
 
 @WebService(endpointInterface = "resources.ICalculadora")
 public class Calculadora implements ICalculadora{
-
-    @Override
-    public double somar (double x, double y){
-        double s = x + y;
-        return s;
-    }
-
-    @Override
-    public double calculadoraRaizQuadrada(double x){
-        double r = Math.sqrt(x);
-        return r;
-    }
-
     @Override
     public  double calcularPonto(double x1,double x2,double y1, double y2){
 
@@ -73,20 +60,61 @@ public class Calculadora implements ICalculadora{
         return soma;
     }
     @Override
-    public double cardapio(int codigo, double preco, int quantidade, double pedido){
+    public double cardapio(int codigo, double preco, int quantidade, double pedido) {
         System.out.println("CARDAPIO\n" +
-        "CODIGO 100  CACHORRO QUENTE  PREÇO 1.20\n" +
-        "CODIGO 101  BAURU SIMPLES    PREÇO 1.30\n" +
-        "CODIGO 102  BAURU COM OVO    PREÇO 1.50\n" +
-        "CODIGO 103  HAMBURGGER       PREÇO 1.20\n" +
-        "CODIGO 104  CHEESEBURGUER    PREÇO 1.30\n" +
-        "CODIGO 105 REFRIGERANTE      PREÇO 1.00\n"
+                "CODIGO 100  CACHORRO QUENTE  PREÇO 1.20\n" +
+                "CODIGO 101  BAURU SIMPLES    PREÇO 1.30\n" +
+                "CODIGO 102  BAURU COM OVO    PREÇO 1.50\n" +
+                "CODIGO 103  HAMBURGGER       PREÇO 1.20\n" +
+                "CODIGO 104  CHEESEBURGUER    PREÇO 1.30\n" +
+                "CODIGO 105 REFRIGERANTE      PREÇO 1.00\n"
         );
         double cachorroQuente = 100;
 
-<<<<<<< HEAD
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Digite o codigo do lanche desejado");
+            codigo = scanner.nextInt();
+
+            System.out.println("Digite a quantidade desejada");
+            Scanner scanner1 = new Scanner(System.in);
+            quantidade = scanner1.nextInt();
+
+            if (codigo == 100) {
+                preco = 1.20;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+            } else if (codigo == 101) {
+                preco = 1.30;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+            } else if (codigo == 102) {
+                preco = 1.50;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+            } else if (codigo == 103) {
+                preco = 1.20;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+            } else if (codigo == 104) {
+                preco = 1.30;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+            } else if (codigo == 105) {
+                preco = 1.00;
+                pedido = preco * quantidade;
+                System.out.println("O seu pedido deu: R$" + pedido);
+
+            } else {
+                System.out.println("CODIGO INVALIDO, POR FAVOR DIGITE UM CODIGO VALIDO.");
+            }
+
+
+            return pedido;
+
+        }
+
     @Override
-    public double calculadora_produto(int ABCD , int XYPK, int KLMP, int QRST) {
+    public double calculadora_produto ( int ABCD, int XYPK, int KLMP, int QRST) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Quantida de produto devido pelo codigo ABCD");
@@ -108,56 +136,38 @@ public class Calculadora implements ICalculadora{
 
         double resultado = (produto1 + produto2 + produto3 + produto4);
         return resultado;
+    }
 
-=======
-        System.out.println("Digite o codigo do lanche desejado");
+    @Override
+    public double Calculador_H(double h ,double n){
+        h = 0;
+        n = 4;
+        for(int i=1; i<=n; i++){
+            h = h + 1/i;
+        }
+
+        double r = h;
+        return r;
+
+    }
+
+    @Override
+    public  double Fator(double n){
         Scanner scanner = new Scanner(System.in);
-        codigo = scanner.nextInt();
 
-        System.out.println("Digite a quantidade desejada");
-        Scanner scanner1 = new Scanner(System.in);
-        quantidade = scanner1.nextInt();
+         double resultado = 1 ;
+         double x = 0 ;
 
-        if (codigo == 100){
-            preco = 1.20;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
+        System.out.println("Digite o numero para a fatoração");
+        n = scanner.nextDouble();
+        for (double i=1; i<=n; i++){
+            resultado *=i;
+
         }
-       else if (codigo == 101){
-            preco = 1.30;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
-        }
-       else if (codigo == 102){
-            preco = 1.50;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
-        }
-       else if (codigo == 103){
-            preco = 1.20;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
-        }
-       else if (codigo == 104){
-            preco = 1.30;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
-        }
-       else if (codigo == 105){
-            preco = 1.00;
-            pedido = preco * quantidade;
-            System.out.println("O seu pedido deu: R$" + pedido);
+        System.out.println(resultado);
+        return  resultado;
 
-        } else {
-            System.out.println("CODIGO INVALIDO, POR FAVOR DIGITE UM CODIGO VALIDO.");
-        }
-
-
-
-
-        return pedido;
->>>>>>> 193b269a0fdb92fc4f8680e46585d9a464f8d5cc
     }
 
 
-}
+    }

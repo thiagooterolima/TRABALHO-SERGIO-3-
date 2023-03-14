@@ -7,16 +7,6 @@ import jakarta.jws.WebService;
 public interface ICalculadora  {
 
     @WebMethod
-    double somar (
-            @WebParam(name = "x")double x,
-            @WebParam(name = "y")double y
-    );
-
-    @WebMethod
-    double calculadoraRaizQuadrada(@WebParam(name= "x")double x);
-
-
-    @WebMethod
     double calcularPonto (
 
             @WebParam(name = "x1") double x1,
@@ -54,8 +44,6 @@ public interface ICalculadora  {
             @WebParam(name = "XYPK") int XYPK,
             @WebParam(name = "KLMP") int KLMP,
             @WebParam(name = "QRST") int QRST
-
-
     );
 
 
@@ -65,6 +53,18 @@ public interface ICalculadora  {
             @WebParam(name = "preco") double preco,
             @WebParam(name = "quantidade") int quantidade,
             @WebParam(name = "pedido") double pedido
+    );
+
+    @WebMethod
+    double Calculador_H(
+            @WebParam(name ="H")double h,
+            @WebParam(name = "N")double n
+
+    );
+
+    @WebMethod
+    double Fator(
+            @WebParam(name ="numero")double n
     );
 
 
